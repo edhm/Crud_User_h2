@@ -49,7 +49,8 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 
 	@Override
 	public void deleteUser(int id) {
-		// TODO Auto-generated method stub
+		String sql = "DELETE FROM tbl_user WHERE id=?";
+		int res = template.update(sql, id);
 
 	}
 

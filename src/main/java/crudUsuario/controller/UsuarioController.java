@@ -46,4 +46,10 @@ public class UsuarioController {
 		usuarioService.editUser(usuario);
 		return "redirect:/listar";
 	}
+
+	@GetMapping("/eliminar/{id}")
+	public String deleteUser(@PathVariable int id) {
+		usuarioService.deleteUser(id);
+		return "redirect:/listar";
+	}
 }

@@ -36,7 +36,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public void deleteUser(int id) {
-		// TODO Auto-generated method stub
+		usuarioDAO.deleteUser(id);
 
 	}
 
