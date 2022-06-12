@@ -20,8 +20,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public Usuario listUserId(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return usuarioDAO.listUserId(id);
 	}
 
 	@Override
@@ -32,8 +31,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public int editUser(Usuario u) {
-		// TODO Auto-generated method stub
-		return 0;
+		return usuarioDAO.editUser(u);
 	}
 
 	@Override

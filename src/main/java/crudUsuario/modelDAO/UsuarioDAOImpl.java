@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.validation.BeanPropertyBindingResult;
 
 import crudUsuario.model.Usuario;
 
@@ -23,8 +24,11 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 
 	@Override
 	public Usuario listUserId(int id) {
-
-		return null;
+		String sql = "select * from tbl_user where id=?";
+		@SuppressWarnings("deprecation")
+		Usuario us = template.queryForObject(sql, new Object[] { id },
+				new BeanPropertyRowMapper<Usuario>(Usuario.class));
+		return us;
 	}
 
 	@Override
@@ -36,9 +40,11 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 	}
 
 	@Override
-	public int editUser(Usuario u) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int editUser(Usuario usuario) {
+		String sql = "UPDATE tbl_user SET firstName=?, lastName=?, sex=?, dni=?, email=?" + " WHERE id=?";
+		int res = template.update(sql, usuario.getFirstName(), usuario.getLastName(), usuario.getSex(),
+				usuario.getDni(), usuario.getEmail(), usuario.getId());
+		return res;
 	}
 
 	@Override

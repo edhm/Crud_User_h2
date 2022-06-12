@@ -27,15 +27,23 @@
 					<div class="form-group">
 						<label>Last Name:</label> <input type="text" name="firstName"
 							class="form-control" value="${user.firstName}">
-					</div> 
+					</div>
 
 					<div class="form-group">
 						<label>Last Name:</label> <input type="text" name="lastName"
 							class="form-control" value="${user.lastName}">
 					</div>
 					<div class="form-group">
+						<label>Sex:</label> <input type="text" name="sex"
+							class="form-control" value="${user.sex}">
+					</div>
+					<div class="form-group">
 						<label>Dni: </label> <input type="text" name="dni"
 							class="form-control" value="${user.dni}">
+					</div>
+					<div class="form-group">
+						<label>Email:</label> <input type="text" name="email"
+							class="form-control" value="${user.email}">
 					</div>
 
 				</div>
