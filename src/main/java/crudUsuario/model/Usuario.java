@@ -1,12 +1,26 @@
-package edhm.crudUsuario.crudUsuario.model;
+package crudUsuario.model;
 
-public class User {
+public class Usuario {
 	private int id;
 	private String firstName;
 	private String lastName;
-	private String Sex;
+	private String sex;
 	private int dni;
 	private String email;
+
+	public Usuario() {
+		super();
+	}
+
+	public Usuario(int id, String firstName, String lastName, String sex, int dni, String email) {
+		super();
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.sex = sex;
+		this.dni = dni;
+		this.email = email;
+	}
 
 	public int getId() {
 		return id;
@@ -33,11 +47,11 @@ public class User {
 	}
 
 	public String getSex() {
-		return Sex;
+		return sex;
 	}
 
 	public void setSex(String sex) {
-		Sex = sex;
+		this.sex = sex;
 	}
 
 	public int getDni() {

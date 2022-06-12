@@ -1,39 +1,39 @@
-package edhm.crudUsuario.crudUsuario.service;
+package crudUsuario.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edhm.crudUsuario.crudUsuario.dao.UserDao;
-import edhm.crudUsuario.crudUsuario.model.User;
+import crudUsuario.model.Usuario;
+import crudUsuario.modelDAO.UsuarioDAO;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UsuarioServiceImpl implements UsuarioService {
 	@Autowired
-	private UserDao uDao;
+	private UsuarioDAO usuarioDAO;
 
 	@Override
-	public List<User> listedUsers() {
-		return uDao.listedUsers();
+	public List<Usuario> listUser() {
+		return usuarioDAO.listUser();
 	}
 
 	@Override
-	public User listUserById(int id) {
+	public Usuario listUserId(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public int addUser(User user) {
+	public int addUser(Usuario u) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public User editUser(User user) {
+	public int editUser(Usuario u) {
 		// TODO Auto-generated method stub
-		return null;
+		return 0;
 	}
 
 	@Override

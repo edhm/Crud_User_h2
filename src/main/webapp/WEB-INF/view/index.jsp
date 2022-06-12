@@ -23,16 +23,15 @@
 					<th>Last name:</th>
 					<th>Sex:</th>
 					<th>Dni:</th>
-					<th>Enail:</th>
+					<th>Email:</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach var="user" items="${users}">
 					<tr>
-
 						<td>${user.id}</td>
 						<td>${user.firstName}</td>
-						<td>${user.lastName}</td>}
+						<td>${user.lastName}</td>
 						<td>${user.sex}</td>
 						<td>${user.dni}</td>
 						<td>${user.email}</td>
