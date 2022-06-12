@@ -5,7 +5,6 @@ import java.util.List;
 import crudUsuario.model.Usuario;
 
 public interface UsuarioDAO {
-	// public List<Usuario> listar();
 	public List<Usuario> listUser();
 
 	public Usuario listUserId(int id);
