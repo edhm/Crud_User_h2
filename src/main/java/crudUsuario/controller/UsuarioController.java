@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import crudUsuario.model.Usuario;
@@ -21,6 +20,17 @@ public class UsuarioController {
 	public String listUser(Model model) {
 		model.addAttribute("users", usuarioService.listUser());
 		return "index";
+	}
+
+	@GetMapping("/nuevo")
+	public String nuevo() {
+		return "agregar";
+	}
+
+	@PostMapping("/agregar")
+	public String addUser(@Validated Usuario usuario) {
+		usuarioService.addUser(usuario);
+		return "redirect:/listar";
 	}
 
 }

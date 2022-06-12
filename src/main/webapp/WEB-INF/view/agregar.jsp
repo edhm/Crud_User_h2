@@ -30,10 +30,17 @@
 							class="form-control">
 					</div>
 					<div class="form-group">
+						<label>Sex:</label> <input type="text" name="sex"
+							class="form-control">
+					</div>
+					<div class="form-group">
 						<label>Dni: </label> <input type="text" name="dni"
 							class="form-control">
 					</div>
-
+					<div class="form-group">
+						<label>Email:</label> <input type="text" name="email"
+							class="form-control">
+					</div>
 				</div>
 				<div class="card-footer">
 					<input type="submit" value="Guardar" class="btn btn-info" /> <a
@@ -44,5 +51,5 @@
 			</div>
 		</form>
 	</div>
-	</body>
+</body>
 </html>

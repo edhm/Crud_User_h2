@@ -23,14 +23,16 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 
 	@Override
 	public Usuario listUserId(int id) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
 	@Override
-	public int addUser(Usuario u) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int addUser(Usuario usuario) {
+		String sql = "INSERT INTO tbl_user(firstName, lastName, sex, dni, email) values(?,?,?,?,?)";
+		int res = template.update(sql, usuario.getFirstName(), usuario.getLastName(), usuario.getSex(),
+				usuario.getDni(), usuario.getEmail());
+		return res;
 	}
 
 	@Override

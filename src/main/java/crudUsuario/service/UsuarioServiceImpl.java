@@ -27,7 +27,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public int addUser(Usuario u) {
 		// TODO Auto-generated method stub
-		return 0;
+		return usuarioDAO.addUser(u);
 	}
 
 	@Override
